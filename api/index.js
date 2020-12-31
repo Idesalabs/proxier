@@ -83,7 +83,7 @@ module.exports = async (req, res) => {
   }
 
   log('Sending request', options)
-
+  res.setHeader('Cache-Control','s-maxage=9999999999, stale-while-revalidate')
   return fetch(finalUrl, options)
     .then(async ({ response, body }) => {
       if (response && response.headers && response.headers['content-type'].includes('json')) {
