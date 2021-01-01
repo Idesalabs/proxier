@@ -10,7 +10,7 @@
         "Access-Control-Allow-Headers": "*",
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Expose-Headers":"*"
+        "Access-Control-Expose-Headers":"access-control-allow-origin"
 
       },
       "dest": "/api/200.js"
@@ -22,7 +22,7 @@
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Headers": "*",
-        "Access-Control-Expose-Headers":"*"
+        "Access-Control-Expose-Headers":"access-control-allow-origin"
       }
     },
     {
@@ -31,7 +31,7 @@
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Headers": "*",
-          "Access-Control-Expose-Headers":"*"
+          "Access-Control-Expose-Headers":"access-control-allow-origin"
       },
       "dest": "/api?url=$1"
     }
