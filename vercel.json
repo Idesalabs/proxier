@@ -7,7 +7,7 @@
       "src": "/(.*)",
       "methods": ["OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://fontofweb.com",
         "Access-Control-Expose-Headers":"access-control-allow-origin"
 
       },
@@ -17,14 +17,14 @@
       "src": "/api",
       "methods": ["POST", "GET", "PUT", "PATCH"],
       "headers": {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://fontofweb.com",
         "Access-Control-Expose-Headers":"access-control-allow-origin"
       }
     },
     {
       "src": "/(.*)",
       "headers": {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://fontofweb.com",
         "Access-Control-Expose-Headers":"access-control-allow-origin"
       },
       "dest": "/api?url=$1"
