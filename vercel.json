@@ -9,7 +9,9 @@
       "headers": {
         "Access-Control-Allow-Headers": "*",
         "Access-Control-Allow-Methods": "*",
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Header":"*"
+
       },
       "dest": "/api/200.js"
     },
@@ -19,7 +21,8 @@
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "*",
-        "Access-Control-Allow-Headers": "*"
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Expose-Header":"*"
       }
     },
     {
