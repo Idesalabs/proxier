@@ -1,39 +1,21 @@
 {
   "version": 2,
-  "name": "proxier",
-  "alias": ["proxier.now.sh"],
+  "alias": [
+    "proxier.now.sh"
+  ],
   "routes": [
     {
-      "src": "/(.*)",
-      "methods": ["OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Origin": "https://fontofweb.com",
-        "Access-Control-Expose-Headers":"*",
-        "Access-Control-Allow-Methods":"POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "*"
-
-      },
-      "dest": "/api/200.js"
-    },
-    {
       "src": "/api",
-      "methods": ["POST", "GET", "PUT", "PATCH"],
       "headers": {
-        "Access-Control-Allow-Origin": "https://fontofweb.com",
-        "Access-Control-Expose-Headers":"*",
-                "Access-Control-Allow-Methods":"POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "*"
-
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "content-encoding,access-control-allow-origin,age,cache-control,content-type,date,expires,last-modified,server,vary,x-cache,content-length,connection,x-final-url"
       }
     },
     {
       "src": "/(.*)",
       "headers": {
-        "Access-Control-Allow-Origin": "https://fontofweb.com",
-        "Access-Control-Expose-Headers":"*",
-                "Access-Control-Allow-Methods":"POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "*"
-
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "content-encoding,access-control-allow-origin,age,cache-control,content-type,date,expires,last-modified,server,vary,x-cache,content-length,connection,x-final-url"
       },
       "dest": "/api?url=$1"
     }

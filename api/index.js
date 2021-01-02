@@ -1,6 +1,6 @@
 const fetch = require('../lib/request')
 
-function log (message, data) {
+function log(message, data) {
   console.log({
     message,
     data,
@@ -61,7 +61,7 @@ module.exports = async (req, res) => {
   }
 
   const finalUrl = `${urlWithSlashes}?${reqParamsUrl}`
-  
+
   const options = {
     url: finalUrl,
     method: req.method,
@@ -83,17 +83,18 @@ module.exports = async (req, res) => {
   }
 
   log('Sending request', options)
-  res.setHeader('Cache-Control','s-maxage=9999999999, stale-while-revalidate')
   return fetch(finalUrl, options)
     .then(async ({ response, body }) => {
       if (response && response.headers && response.headers['content-type'].includes('json')) {
         return res.json(JSON.parse(body))
       }
+
+      res.setHeader('Cache-Control', 's-maxage=9999999999, stale-while-revalidate')
       return res.send(body)
     })
     .catch(err => {
       log('err ->', err)
-      return res.status(500).send(err.message)
+      return res.status(200).send(err.message)
     })
 
 }
