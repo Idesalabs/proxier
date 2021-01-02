@@ -8,7 +8,8 @@
       "methods": ["OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "https://fontofweb.com",
-        "Access-Control-Expose-Headers":"access-control-allow-origin"
+        "Access-Control-Expose-Headers":"access-control-allow-origin",
+        "Access-Control-Allow-Methods":"POST, GET, OPTIONS"
 
       },
       "dest": "/api/200.js"
@@ -18,14 +19,18 @@
       "methods": ["POST", "GET", "PUT", "PATCH"],
       "headers": {
         "Access-Control-Allow-Origin": "https://fontofweb.com",
-        "Access-Control-Expose-Headers":"access-control-allow-origin"
+        "Access-Control-Expose-Headers":"access-control-allow-origin",
+                "Access-Control-Allow-Methods":"POST, GET, OPTIONS"
+
       }
     },
     {
       "src": "/(.*)",
       "headers": {
         "Access-Control-Allow-Origin": "https://fontofweb.com",
-        "Access-Control-Expose-Headers":"access-control-allow-origin"
+        "Access-Control-Expose-Headers":"access-control-allow-origin",
+                "Access-Control-Allow-Methods":"POST, GET, OPTIONS"
+
       },
       "dest": "/api?url=$1"
     }
